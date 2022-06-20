@@ -1,0 +1,23 @@
+﻿<Window x:Class="RpcServer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RpcServer"
+        mc:Ignorable="d"
+        Title="服务端" Height="450" Width="800">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" Height="40">
+            <Button Content="发送台风预警" Click="ButtonSendAlert_Click" />
+            <TextBox Width="200" x:Name="tbxInput" TextWrapping="Wrap" AcceptsReturn="True" VerticalContentAlignment="Center" Margin="10,0,0,0" />
+            <Button Content="发送普通消息" Margin="10,0,0,0" Click="ButtonSendNormalMsg_Click" />
+        </StackPanel>
+        <TextBox Grid.Row="1" Margin="0,10,0,0" x:Name="tbxLog" AcceptsReturn="True" TextWrapping="Wrap">
+
+        </TextBox>
+    </Grid>
+</Window>
